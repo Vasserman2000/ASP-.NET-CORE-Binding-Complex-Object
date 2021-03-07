@@ -43,7 +43,7 @@ namespace WebApplication8.Controllers
         // POST: CompanyController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(CompanyViewModel viewModel)
+        public ActionResult Create([Bind(Prefix = "Company.CompanyAddress")] CompanyAddress companyAddress)
         {
             try
             {
